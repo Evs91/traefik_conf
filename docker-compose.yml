@@ -15,6 +15,12 @@ services:
       - "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
       - "--certificatesresolvers.myresolver.acme.email=postmaster@saltysysadmin.org"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+      - "--traefik.http.routers.blog.tls.domains[0].main=saltysysadmin.com
+      - "--traefik.http.routers.blog.tls.domains[0].sans=*.saltysysadmin.org
+
+      ## Plugins: 
+      - "--experimental.plugins.cloudflarewarp.modulename=github.com/BetterCorp/cloudflarewarp"
+      - "--experimental.plugins.cloudflarewarp.version=v1.3.3"
     ports:
       # The HTTP port
       - "80:80"
