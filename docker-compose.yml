@@ -15,8 +15,7 @@ services:
       - "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
       - "--certificatesresolvers.myresolver.acme.email=postmaster@saltysysadmin.org"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
-      - "--http.routers.blog.tls.domains[0].main=saltysysadmin.com"
-      - "--http.routers.blog.tls.domains[0].sans=*.saltysysadmin.org"
+
 
       ## Plugins: 
       - "--experimental.plugins.cloudflarewarp.modulename=github.com/BetterCorp/cloudflarewarp"
