@@ -7,6 +7,7 @@ services:
     # Enables the web UI and tells Traefik to listen to docker
     command: 
       - "--api.insecure=true"
+      - "--api.debug=true"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entryPoints.web.address=:80"
@@ -15,6 +16,10 @@ services:
       - "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
       - "--certificatesresolvers.myresolver.acme.email=postmaster@saltysysadmin.org"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+      - "--certificatesresolvers.myresolver.acme.certificatesDuration=2160"
+      - "--certificatesresolvers.myresolver.acme.keytype=RSA4096"
+      - "--certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web"
+      
 
 
       ## Plugins: 
