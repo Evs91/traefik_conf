@@ -19,6 +19,7 @@ services:
       - "--entryPoints.web.reusePort=true"
       - "--entryPoints.websecure.http.tls.certResolver=myresolver"
       - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesResolvers.myresolver.acme.httpChallenge=true"
       - "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
       - "--certificatesresolvers.myresolver.acme.email=postmaster@saltysysadmin.org"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
