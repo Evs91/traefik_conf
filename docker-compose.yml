@@ -21,7 +21,8 @@ services:
       - "--certificatesResolvers.myresolver.acme.dnsChallenge=true"
       - "--certificatesResolvers.myresolver.acme.dnsChallenge.provider=cloudflare"
       - "--certificatesResolvers.myresolver.acme.httpChallenge=true"
-      - "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
+     #Uncomment for Staging LE Certs
+     # - "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
       - "--certificatesresolvers.myresolver.acme.email=postmaster@saltysysadmin.org"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
       - "--certificatesresolvers.myresolver.acme.certificatesDuration=2160"
