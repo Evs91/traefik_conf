@@ -42,8 +42,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - letsencrypt:/letsencrypt
     environment:
-      CLOUDFLARE_EMAIL: ${CF_API_EMAIL}
-      CLODUFLARE_DNS_API_TOKEN: ${CF_DNS_API_TOKEN}
+      CLOUDFLARE_API_EMAIL: ${CLOUDFLARE_API_EMAIL}
+      CLODUFLARE_DNS_API_TOKEN: ${CLOUDFLARE_DNS_API_TOKEN}
   whoami:
     # A container that exposes an API to show its IP address
     image: traefik/whoami
