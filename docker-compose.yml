@@ -49,7 +49,7 @@ services:
     # A container that exposes an API to show its IP address
     image: traefik/whoami
     labels:
-      - "traefik.http.routers.whoami.rule=Host(`whoami.docker.localhost`)"
+      - "traefik.http.routers.whoami.rule=Host(`whoami.saltysysadmin.org`)"
 volumes:
   letsencrypt:
     driver: local
