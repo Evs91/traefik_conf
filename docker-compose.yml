@@ -53,8 +53,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.whoami.rule=Host(`whoami.saltysysadmin.org`)"
-      - "traefik.http.routers.wiki.tls.certresolver=myresolver"
-      - "traefik.http.routers.wiki.tls=true"
+      - "traefik.http.routers.whoami.tls.certresolver=myresolver"
+      - "traefik.http.routers.whoami.tls=true"
       
 volumes:
   letsencrypt:
