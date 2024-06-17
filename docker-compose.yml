@@ -15,7 +15,7 @@ services:
       - "--providers.docker.exposedbydefault=false"
       - "--entryPoints.web.address=:80"
       - "--entryPoints.websecure.address=:443"
-      - "--entryPoints.web.reusePort=true"
+#      - "--entryPoints.web.reusePort=true"
       - "--entryPoints.websecure.http.tls.certResolver=myresolver"
 #      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
       - "--certificatesResolvers.myresolver.acme.dnsChallenge=true"
