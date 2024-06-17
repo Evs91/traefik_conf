@@ -54,7 +54,7 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.whoami.rule=Host(`whoami.saltysysadmin.org`)"
       - "traefik.http.routers.whoami.entrypoints=web"
-#      - "traefik.http.services.whoami.loadbalancer.server.port=80"
+      - "traefik.http.services.whoami.loadbalancer.server.port=80"
 volumes:
   letsencrypt:
     driver: local
