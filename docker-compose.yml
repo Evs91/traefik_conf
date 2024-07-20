@@ -23,6 +23,7 @@ services:
       - "--certificatesResolvers.myresolver.acme.httpChallenge=true"
       - "--metrics.addinternals"
       - "--accesslog=true"
+      - "--log.format=json"
       - "--log.maxbackups=14"
       - "--accesslog.filepath=/var/logs/access.log"
       - "--accesslog.bufferingsize=500"
