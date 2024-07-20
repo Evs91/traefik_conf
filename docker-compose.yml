@@ -22,7 +22,6 @@ services:
       - "--certificatesResolvers.myresolver.acme.dnsChallenge.provider=cloudflare"
       - "--certificatesResolvers.myresolver.acme.httpChallenge=true"
       - "--metrics.addinternals"
-      - "--tracing=true"
       - "--accesslog=true"
       - "--log.maxbackups=14"
       - "--accesslog.filepath=/var/logs/access.log"
