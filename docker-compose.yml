@@ -21,6 +21,15 @@ services:
       - "--certificatesResolvers.myresolver.acme.dnsChallenge=true"
       - "--certificatesResolvers.myresolver.acme.dnsChallenge.provider=cloudflare"
       - "--certificatesResolvers.myresolver.acme.httpChallenge=true"
+      - "--metrics.addinternals"
+      - "--tracing=true"
+      - "--accesslog=true"
+      - "--log.maxbackups=14"
+      - "--accesslog.filepath=/var/logs/access.log"
+      - "--accesslog.bufferingsize=500"
+
+
+      
      #Uncomment for Staging LE Certs
      # - "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
       - "--certificatesresolvers.myresolver.acme.email=postmaster@saltysysadmin.org"
@@ -42,6 +51,7 @@ services:
       # So that Traefik can listen to the Docker events
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - letsencrypt:/letsencrypt
+      - traefik_logs:/var/logs/access.log
     environment:
       CLOUDFLARE_EMAIL: ${CLOUDFLARE_API_EMAIL}
       CLOUDFLARE_DNS_API_TOKEN: ${CLOUDFLARE_DNS_API_TOKEN}
@@ -49,6 +59,8 @@ services:
       - proxy
 volumes:
   letsencrypt:
+    driver: local
+  traefik_logs:
     driver: local
 networks:
   proxy:
