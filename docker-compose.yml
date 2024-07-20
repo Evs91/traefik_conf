@@ -51,7 +51,7 @@ services:
       # So that Traefik can listen to the Docker events
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - letsencrypt:/letsencrypt
-      - traefik_logs:/var/logs/access.log
+      - traefik_logs:/var/logs
     environment:
       CLOUDFLARE_EMAIL: ${CLOUDFLARE_API_EMAIL}
       CLOUDFLARE_DNS_API_TOKEN: ${CLOUDFLARE_DNS_API_TOKEN}
