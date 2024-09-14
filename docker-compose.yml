@@ -31,7 +31,13 @@ services:
       - "--log.maxbackups=14"
       - "--accesslog.filepath=/var/logs/access.log"
       - "--accesslog.bufferingsize=500"
-
+      - "--metrics.otlp=true"
+      - "--metrics.otlp.addEntryPointsLabels=true"
+      - "--metrics.otlp.addServicesLabels=true"
+      - "--metrics.otlp.pushInterval=30s"
+      - "--metrics.otlp.http.endpoint=http://localhost:4318/v1/metrics"
+      - "--metrics.otlp.grpc.endpoint=localhost:4317"
+      
 
       
      #Uncomment for Staging LE Certs
