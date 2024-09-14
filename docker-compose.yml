@@ -36,6 +36,7 @@ services:
       - "--metrics.otlp.addServicesLabels=true"
       - "--metrics.otlp.pushInterval=30s"
       - "--metrics.otlp.http.endpoint=http://localhost:4318/v1/metrics"
+      - "--metrics.otlp.grpc=true"
       - "--metrics.otlp.grpc.endpoint=localhost:4317"
       - "--metrics.otlp.grpc.insecure=true"
 
