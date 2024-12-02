@@ -22,6 +22,6 @@ services:
     devices:
       - /dev/net/tun:/dev/net/tun
     ports:
-      - 8080:8080
-      - 8080:8080/udp
+      - 8888:8080
+      - 8888:8080/udp
     restart: always
