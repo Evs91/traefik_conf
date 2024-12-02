@@ -16,6 +16,7 @@ services:
       - PORT_FORWARD_ONLY=on
       - VPN_PORT_FORWARDING_PROVIDER=protonvpn
       - VPN_PORT_FORWARDING=on
+      - HTTPPROXY=on
     volumes:
       - /docker/appdata/gluetun:/config
       - /lib/modules:/lib/modules:ro
