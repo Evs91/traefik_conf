@@ -44,8 +44,6 @@ services:
     environment:
       - TZ=UTC
     network_mode: "service:gluetun"
-    networks:
-      - gluetun_int
 volumes:
   squid_cache:
 networks:
