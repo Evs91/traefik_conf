@@ -34,6 +34,9 @@ services:
       - 1080:1080
       - 1080:1080/udp
     restart: always
+    networks:
+      - gluetun_ext
+      - gluetun_int
   squid:
     image: ubuntu/squid
     volumes:
@@ -41,6 +44,8 @@ services:
     environment:
       - TZ=UTC
     network_mode: "service:gluetun"
+    networks:
+      - gluetun_int
 volumes:
   squid_cache:
 networks:
