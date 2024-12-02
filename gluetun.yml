@@ -29,4 +29,13 @@ services:
     ports:
       - 8888:8080
       - 8888:8080/udp
+      - 3128:3128
+      - 3128:3128/udp
     restart: always
+  squid:
+    image: ubuntu/squid
+    volumes:
+    - squid_cache:/var/spool/squid 
+    network_mode: "service:gluetun"
+volumes:
+  squid_cache:
