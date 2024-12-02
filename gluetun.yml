@@ -35,7 +35,9 @@ services:
   squid:
     image: ubuntu/squid
     volumes:
-    - squid_cache:/var/spool/squid 
+      - squid_cache:/var/spool/squid
+    environment:
+      - TZ=UTC
     network_mode: "service:gluetun"
 volumes:
   squid_cache:
