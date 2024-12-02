@@ -19,7 +19,7 @@ services:
       - HTTPPROXY=on
       - HTTPPROXY_USER=${HTTPPROX_USER}
       - HTTPPROXY_PASSWORD=${HTTPPROX_PASS}
-      - HTTPPROXY_STEALTH={HTTPPROX_STEALTH_ONOFF}
+      - HTTPPROXY_STEALTH=${HTTPPROX_STEALTH_ONOFF}
       - HTTPPROXY_LOG=${HTTPPROX_LOG_ONOFF}
     volumes:
       - /docker/appdata/gluetun:/config
