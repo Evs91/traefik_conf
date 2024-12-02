@@ -43,3 +43,9 @@ services:
     network_mode: "service:gluetun"
 volumes:
   squid_cache:
+networks:
+  gluetun_ext:
+    attachable: true
+  gluetun_int:
+    attachable: true
+      
