@@ -31,6 +31,8 @@ services:
       - 8888:8080/udp
       - 3128:3128
       - 3128:3128/udp
+      - 1080:1080
+      - 1080:1080/udp
     restart: always
   squid:
     image: ubuntu/squid
